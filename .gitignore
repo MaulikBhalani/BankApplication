@@ -1,9 +1,0 @@
-*.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-db.sqlite3
-venv/
-!*/migrations
-!*/migrations/__init__.py
