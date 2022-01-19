@@ -13,27 +13,28 @@
 {% endblock %}
 
 <div>
-{% block extra_content%}
+    {% block extra_content%}
 
-<div class="dummy-text">
-    <div style="background-color: rgb(139, 139, 163);">
-        <h1 style="font-size: 46px;  margin-bottom: 16cm;"><b>Welcome to Basic Banking System</b></h1>
-    </div>   
-</div>
-{% endblock %}
+    <div class="dummy-text">
+        <div style="background-color: rgb(139, 139, 163);">
+            <h1 style="font-size: 46px;  margin-bottom: 16cm;"><b>Welcome to Basic Banking System</b></h1>
+        </div>
+    </div>
+    {% endblock %}
 </div>
 
 {% block temp %}
 
-    {% load static %} <img style="margin-top: 6cm; margin-left:27cm;" src="{% static "home.png" %}" alt="home" width="850" height="650" >
-    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 40px; margin-top: -16cm; margin-left: 2cm;">Banking is Necessary, Banks are Not<h2 style=" font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:24px; margin-left: 16cm;">~Bill Gates</h2></h1>
-    {% load static %}<link rel="stylesheet" href="{% static 'homepage_button.css' %}" type="text/css"><a href="http://127.0.0.1:8000/customer/" class="button_temp">Get Started</a>
+{% load static %} <img style="margin-top: 6cm; margin-left:27cm;" src="{% static " home.png" %}" alt="home" width="850"
+    height="650">
+<h1
+    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 40px; margin-top: -16cm; margin-left: 2cm;">
+    Banking is Necessary, Banks are Not<h2
+        style=" font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:24px; margin-left: 16cm;">
+        ~Bill Gates</h2>
+</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'homepage_button.css' %}" type="text/css"><a
+    href="https://bankingapplicationbymaulik.herokuapp.com/customer/" class="button_temp">Get Started</a>
 
 {% endblock %}
-
-<!--
-<div>
-{% block temp_button %}
-    
-{% endblock %}
-</div>
