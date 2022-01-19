@@ -6,14 +6,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.body{
-	color:#f3f8fe;
-}
-
 .section{
 	width: 100%;
 	min-height: 100vh;
-	background-color: #ddd;
+	background-color: #f3f8fe;
 }
 .container{
 	width: 80%;
