@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-</head>
-<body>
-  <h1>Abous Us Page</h1>
-</body>
-</html>
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'transaction.css' %}" type="text/css">
+{% endblock link %}
+
+{% block content %}
+
+<!-- NAV BAR START-->
+<div class="content">
+  <div class="logo"><a href="/">BANK</a></div>
+  <ul class="links">
+    <li><a href="/">Home</a></li>
+    <li><a href="https://trialbymaulik.herokuapp.com/Customer">Customers</a></li>
+    <li><a href="https://trialbymaulik.herokuapp.com/transaction">Transaction</a></li>
+    <li><a href="http://127.0.0.1:8000/about_us">About us</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block extra_content%}
+
+<h1 style="margin-top: 3cm; margin-left: 10cm; font-size: 42px;">About Us</h1>
+{% endblock %}
+
+{% block temp_button %}
+
+<h1>Contact Us Page</h1>
+
+
+{% endblock %}
