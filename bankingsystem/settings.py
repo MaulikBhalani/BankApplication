@@ -36,7 +36,7 @@ STATIC_URL = True
 
 #ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['trialbymaulik.herokuapp.com']
+ALLOWED_HOSTS = ['bankingapplicationbymaulik.herokuapp.com']
 
 # Application definition
 
