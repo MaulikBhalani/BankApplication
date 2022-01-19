@@ -1,0 +1,66 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'transaction.css' %}" type="text/css">
+{% endblock link %}
+
+
+{% block content %}
+
+<!-- NAV BAR START-->
+<div class="content">
+  <div class="logo"><a href="/">BANK</a></div>
+  <ul class="links">
+    <li><a href="/">Home</a></li>
+    <li><a href="http://127.0.0.1:8000/customer/">Customers</a></li>
+    <li><a href="http://127.0.0.1:8000/transaction">Transaction</a></li>
+    <li><a href="#Passbook">Passbook</a></li>
+    <li><a href="http://127.0.0.1:8000/about_us">Contact us</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+<!-- NAV BAR END-->
+
+
+{% block extra_content%}
+
+<h1 style="margin-top: 3cm; margin-left: 15cm; font-size: 42px;">Transaction History</h1>
+{% endblock %}
+
+{% block temp_button %}
+<table>
+  <thead>
+    <tr>
+      <th style="font-size: 20px; color:rebeccapurple;">Sender's Name</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Sender's Account No.</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Sender's Current Balance</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Money Deposit</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Receiver's Name</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Date</th>
+    </tr>
+  </thead>
+  {% for details in history %}
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{details.source_name}}</td>
+      <td>{{details.source_acc_no}}</td>
+      <td>{{details.Current_balance}}</td>
+      <td>{{details.money_deposit}}</td>
+      <td>{{details.destination_name}}</td>
+      <td>{{details.date}}</td>
+    </tr>
+
+  </tbody>
+  {% endfor %}
+</table>
+{% endblock %}

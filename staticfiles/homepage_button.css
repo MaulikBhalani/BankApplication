@@ -1,0 +1,16 @@
+.button_temp {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 16px;
+  margin: 88px 300px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button_temp:hover {opacity: 1}

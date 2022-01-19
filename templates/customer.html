@@ -1,0 +1,71 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'transaction.css' %}" type="text/css">
+{% endblock link %}
+
+
+{% block content %}
+
+<!-- NAV BAR START-->
+<div class="content">
+  <div class="logo"><a href="/">BANK</a></div>
+  <ul class="links">
+    <li><a href="/">Home</a></li>
+    <li><a href="http://127.0.0.1:8000/customer/">Customers</a></li>
+    <li><a href="http://127.0.0.1:8000/transaction">Transaction</a></li>
+    <li><a href="#Passbook">Passbook</a></li>
+    <li><a href="http://127.0.0.1:8000/about_us">Contact us</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+<!-- NAV BAR END-->
+
+
+{% block extra_content%}
+
+<h1 style="margin-top: 3cm; margin-left: 10cm; font-size: 42px;">Customer List</h1>
+{% endblock %}
+
+{% block temp_button %}
+<form action="/view" method="POST" class="spacing_manage">
+<table style="margin-top: 1cm; border-color: red;">
+  <thead>
+    <tr>
+      <th style="font-size: 20px; color:rebeccapurple;">A/C No.</th>
+      <th style="font-size: 20px; color:rebeccapurple; padding-left: 1cm;">Name</th>
+      <th style="font-size: 20px; color:rebeccapurple; padding-left: 2.5cm;">Email</th>
+      <th style="font-size: 20px; color:rebeccapurple; padding-left: 1.8cm;">City</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Amount</th>
+      <th style="font-size: 20px; color:rebeccapurple;">Selection</th>
+    </tr>
+  </thead>
+
+  {% for details in cust_details %}
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{details.account_no}}</td>
+      <td>{{details.name}}</td>
+      <td>{{details.email}}</td>
+      <td>{{details.city}}</td>
+      <td>{{details.amount}}</td>
+      <td><button type="submit" name="submit" value="{{details.name}}"
+          style="width: 3cm; height: 1cm;">Transfer</button></td>
+      {% csrf_token %}
+    </tr>
+
+  </tbody>
+  {% endfor %}
+</table>
+</form>
+{% endblock %}
